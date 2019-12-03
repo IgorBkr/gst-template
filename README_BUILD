@@ -21,3 +21,6 @@ $ printenv to GST_PLUGIN_PATH
 
 Test if plugin is "installed":
 $ gst-inspect-1.0 [plugin-name] // "myfilter"
+
+To rebuild after code changes - go to corresponding build directory (/gst-template/builddir/) and simply run:
+$ ninja
