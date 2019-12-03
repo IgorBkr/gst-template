@@ -16,7 +16,7 @@ to set/reset use:
 $ export GST_PLUGIN_PATH=[path-value]
 
 to check current value:
-$ printenv to GST_PLUGIN_PATH 
+$ printenv GST_PLUGIN_PATH 
 ) 
 
 Test if plugin is "installed":
