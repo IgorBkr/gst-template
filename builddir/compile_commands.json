@@ -1,0 +1,17 @@
+[
+  {
+    "directory": "/home/igorb/Coding/GST/gst-template/builddir",
+    "command": "cc  -Igst-app/gst-app@exe -Igst-app -I../gst-app -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O0 -g -pthread -MD -MQ 'gst-app/gst-app@exe/src_main.c.o' -MF 'gst-app/gst-app@exe/src_main.c.o.d' -o 'gst-app/gst-app@exe/src_main.c.o' -c ../gst-app/src/main.c",
+    "file": "../gst-app/src/main.c"
+  },
+  {
+    "directory": "/home/igorb/Coding/GST/gst-template/builddir",
+    "command": "cc  -Igst-app/gst-app@exe -Igst-app -I../gst-app -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O0 -g -pthread -MD -MQ 'gst-app/gst-app@exe/src_play.c.o' -MF 'gst-app/gst-app@exe/src_play.c.o.d' -o 'gst-app/gst-app@exe/src_play.c.o' -c ../gst-app/src/play.c",
+    "file": "../gst-app/src/play.c"
+  },
+  {
+    "directory": "/home/igorb/Coding/GST/gst-template/builddir",
+    "command": "cc  -Igst-plugin/gstmyfilter@sha -Igst-plugin -I../gst-plugin -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O0 -g -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ 'gst-plugin/gstmyfilter@sha/src_gstmyfilter.c.o' -MF 'gst-plugin/gstmyfilter@sha/src_gstmyfilter.c.o.d' -o 'gst-plugin/gstmyfilter@sha/src_gstmyfilter.c.o' -c ../gst-plugin/src/gstmyfilter.c",
+    "file": "../gst-plugin/src/gstmyfilter.c"
+  }
+]
