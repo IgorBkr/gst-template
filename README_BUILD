@@ -1,0 +1,23 @@
+To configure plugin buld - edit file: /gst-template/gst-plugin/meson.build
+
+To run the build - run: /gst-template/meson.build
+
+$ cd /gst-template
+$ meson builddir
+$ ninja -C builddir
+
+The output (for plugins) will be in:/gst-template/builddir/gst-plugin
+(in case of "myfilter" plugin the output file name will be: libgstmyfilter.so )
+
+In order for GStreamer to find your plugins, set environment variable GST_PLUGIN_PATH to /gst-template/builddir/gst-plugin
+(using absolute path is the best;
+
+to set/reset use:
+$ export GST_PLUGIN_PATH=[path-value]
+
+to check current value:
+$ printenv to GST_PLUGIN_PATH 
+) 
+
+Test if plugin is "installed":
+$ gst-inspect-1.0 [plugin-name] // "myfilter"
