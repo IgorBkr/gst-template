@@ -48,6 +48,7 @@ play_uri (const gchar * uri)
   GstElement *playbin;
   GstElement *audiosink;
   GstElement *videosink;
+  GstElement* filter;
   GstMessage *msg = NULL;
   GstBus *bus;
 
@@ -71,6 +72,13 @@ play_uri (const gchar * uri)
   if (videosink == NULL)
     goto no_autovideosink;
   g_object_set (playbin, "video-sink", videosink, NULL);
+
+  // ADD YOUR NEW FILTER HERE
+  /* add 'myfilter' as video-ilter to playbin*/
+  filter = gst_element_factory_make("myfilter", "filter");
+  if (!filter)
+    goto no_filter;
+  g_object_set(playbin, "video-filter", filter, NULL);
 
   /* set URI to play back */
   g_object_set (playbin, "uri", uri, NULL);
@@ -170,6 +178,14 @@ no_autoaudiosink:
 no_autovideosink:
   {
     g_error ("Could not create GStreamer 'autovideosink' element. "
+        "Please install it");
+    /* not reached, g_error aborts */
+    return;
+  }
+
+no_filter:
+  {
+    g_error ("Could not create GStreamer 'filter' element. "
         "Please install it");
     /* not reached, g_error aborts */
     return;
