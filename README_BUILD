@@ -24,3 +24,15 @@ $ gst-inspect-1.0 [plugin-name] // "myfilter"
 
 To rebuild after code changes - go to corresponding build directory (/gst-template/builddir/) and simply run:
 $ ninja
+
+***
+To set GST_PLUGIN_PATH enviroment variable permanently (as opposite to for a session):
+
+Open .bashrc file in an editor, for example :
+ $ nano .bashrc
+
+Then add at the end of the file your variable as following:
+ export GST_PLUGIN_PATH="/home/[PATHTOYOURPLUGINS]"
+
+Then save and close and open the terminal, check if your variable has been set
+$ printenv GST_PLUGIN_PATH
